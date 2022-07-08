@@ -43,21 +43,21 @@ sudo apt install rpi-imager
 ```
 After the installation of imager is finished, run it, and the imager should look like this:
 
-![Raspberry Pi Imager](/Images/Capture1.PNG)
+![Raspberry Pi Imager](/Pi-Hole/Images/Capture1.PNG)
 
 My microSD is brand new, so I need to format it to be FAT32, but thankfully, the imager already got that function, **CHOOSE OS > ERASE > CHOOSE STORAGE > WRITE**
 
-![Raspberry Pi Format FAT32](/Projects/Pi-Hole/Images/Capture2.PNG)
+![Raspberry Pi Format FAT32](/Pi-Hole/Images/Capture2.PNG)
 
 (In this Picture im using USB as an example)
 
 With the Formatted microSD, **Choose Storage > MicroSD**, and pick the operating system, I'll be using the **Raspberry Pi OS (32 Bit)**
 
-![Raspberry Pi OS](/Images/Capture3.PNG)
+![Raspberry Pi OS](/Pi-Hole/Images/Capture3.PNG)
 
 After Choosing the OS, a **Gear** logo should appear, with this gear logo, you can enable some setting that could help set up Headless Raspberry Pi
 
-![Settings](/Images/Capture4.PNG)
+![Settings](/Pi-Hole/Images/Capture4.PNG)
 
 >1. Enable the "Set Hostname" if the hostname wanted to be changed
 >2. Enable the "Enable SSH", this is needed for headless connection with the Raspberry Pi
@@ -84,33 +84,33 @@ ipconfig
 ```
 this will shows the default gateway, in my case, the default gateway is **192.168.0.1**
 
-![Default Gateway](/Images/Capture5.PNG)
+![Default Gateway](/Pi-Hole/Images/Capture5.PNG)
 
 After knowing the default gateway, go to Chrome or any other search engine, and type in the default gateway, after that the admin setting should pop up.
 
-![Router Admin Settings](/Images/Capture6.PNG)
+![Router Admin Settings](/Pi-Hole/Images/Capture6.PNG)
 
 In my case, the TP-Link admin looks like the picture, if this is the first time of accessing this setting, the password should be the default that can be found from the back of the router or searched online. but usually the password is `admin` or even nothing.
 
 If the password is correctly entered, the router can now be worked on. with TP-Link TL-WR940N, the UI looks like this:
 
-![TP-Link UI](/Images/Capture7.PNG)
+![TP-Link UI](/Pi-Hole/Images/Capture7.PNG)
 
 Click on the `DHCP` and more lists of setting would pop up, the IP and MAC of the devices that connected to the router can be seen here. 
 
-![DHCP Settings](/Images/Capture8.PNG)
+![DHCP Settings](/Pi-Hole/Images/Capture8.PNG)
 
 If the previous "Angryscanner" can't find the Raspberry Pi IP, The IP of the Raspberry Pi should be here. Go to the `DHCP Client List` and search a Client name with something like "raspberry", Copy the IP and MAC of the Raspberry PI and go to the `Address Reservation` and paste it the IP and MAC of the Raspberry PI, this is done to make sure that the IP of the Raspberry Doesn't change if the Raspberry PI is turned off. After all of that is finished, it should look like this:
 
-![Address Reseration](/Images/Capture9.PNG)
+![Address Reseration](/Pi-Hole/Images/Capture9.PNG)
 
 Ok. Now access the Raspberry PI with Putty by entering the IP address of the reserved IP:
 
-![Putty](/Images/Capture10.PNG)
+![Putty](/Pi-Hole/Images/Capture10.PNG)
 
 After the Hostname or IP address of the Pi, Click "Open" and a window will pop up, asking `login as` and followed by the password that has been setup at the imager, and it should look like this:
 
-![Putty Login](/Images/Capture11.PNG)
+![Putty Login](/Pi-Hole/Images/Capture11.PNG)
 
 the line of the CLI will be green indicating that we've been connected to the Pi, after that we can install the Pi-Hole by using this command:
 ```
@@ -141,7 +141,7 @@ http://192.168.0.100/admin
 ```
 the interface will look like this, as of Pi-Hole version **5.11.3** and web interface version **5.13**
 
-![WEB Interface](/Images/Capture12.PNG)
+![WEB Interface](/Pi-Hole/Images/Capture12.PNG)
 
 to access the information, Click on the **Login** using the provided password when installing the Pi-Hole or using custom password by doing this command:
 ```
@@ -169,5 +169,5 @@ To make the Blocking capabiliy of the Pi-Hole better, we can add more "**adlist*
 ## Conclusion
 In conclusion, Pi-Hole as a DNS Server are really good learning project, from how to set up the DHCP IP address reservation, accessing router admin configuration, configurating the installation to SSH communication.
 
-![Finished Project](/Images/Capture13.PNG)
+![Finished Project](/Pi-Hole/Images/Capture13.PNG)
 
