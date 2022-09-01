@@ -167,7 +167,7 @@ To make the Blocking capabiliy of the Pi-Hole better, we can add more "**adlist*
 ---
 
 ## Conclusion
-In conclusion, Pi-Hole as a DNS Server are really good learning project, from how to set up the DHCP IP address reservation, accessing router admin configuration, configurating the installation to SSH communication.
+In conclusion, Pi-Hole as a DNS Server are really good learning project, from how to set up the DHCP IP address reservation, accessing router admin configuration, configurating the installation to SSH communication,.
 
 ![Finished Project](/Pi-Hole/Images/Capture13.PNG)
 
