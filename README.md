@@ -1,3 +1,3 @@
-# Projects
+# Pi-Hole Learning Project
 
-For the "writeup" of projects
+A Write Up for Pi-Hole Learning Project Using Raspberry Pi
